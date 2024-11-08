@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'agressiveleenx';
+    src: url('fonts/AGRESSIVE.otf') format('opentype'),
+
+  }
+
+
+
+  @font-face {
+    font-family: 'papyrusleenx';
+    src: url('fonts/PAPYRUS.TTF') format('opentype'),
+
+  }
+
+  @font-face {
+    font-family: 'poppinsbold';
+    src: url('fonts/Poppins-Bold.ttf') format('opentype'),
+
+  }
