@@ -5,3 +5,9 @@
 .m-auto{
     margin: auto;
 }
+.absolute{
+    position: absolute;
+}
+.relative{
+    position: relative;
+}

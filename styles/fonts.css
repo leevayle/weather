@@ -15,3 +15,15 @@
     src: url('../fonts/Poppins-Bold.ttf') format('opentype'),
 
   }
+
+  @font-face {
+    font-family: 'maiandraleenx';
+    src: url('../fonts/MAIAN.TTF') format('opentype'),
+
+  }
+
+  @font-face {
+    font-family: 'josefinleenx';
+    src: url('../fonts/JosefinSlab-VariableFont_wght.ttf') format('opentype'),
+
+  }

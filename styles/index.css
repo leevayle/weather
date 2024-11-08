@@ -1,3 +1,6 @@
+/* color varriables */
+
+
 /* Leenx solutions 2024 */
 body, html {
     height: 100%;
@@ -15,7 +18,7 @@ html::-webkit-scrollbar {
   }
   
 .head{
-    height: 65px;
+    height: 75px;
     display: flex;
     margin: auto;
     max-width: 1000px;
@@ -105,8 +108,67 @@ html::-webkit-scrollbar {
     padding-top: 20px;
     cursor: pointer;
 }
-.body{
-    height: 550px;
+.homebody{
+    height: auto;
+}
+.home-icon{
+    width: 80%;
+    margin: auto;
+    min-width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    padding-left: 50px;
+}
+.home-icon-pic{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+}
+.icon-glow{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top:30%;
+    left: 40%;
+    box-shadow: 0 0 80px 40px rgb(255, 251, 0);
+}
+
+.home-reading{
+    width: 90%;
+    min-width: 200px;
+    height: 150px;
+    margin: auto;
+    margin-top: 25px;
+    display: flex;
+    color: #cccccc;
+    font-family: 'maiandraleenx',sans-serif;
+    font-weight: bolder;
+}
+#temp{
+    font-size: 100px;
+    margin-right: 5px;
+}
+.degree-reading{
+    font-size: 30px;
+    padding-top: 40px;
+    margin-right: 3px;
+}
+#temp-unit{
+    margin-right: auto;
+    font-size: 30px;
+}
+.home-subreading{
+    height: 40px;
+    max-width:90%;
+    text-align: center;
+    color: #a8a8a8;
+    margin: auto;
+    margin-top: -15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'josefinleenx',sans-serif;
+    font-size: 25px;
 }
 .more-values{
     height: 200px;
@@ -118,7 +180,6 @@ html::-webkit-scrollbar {
     height: auto;
     min-height: 250px;
     max-height: 500px;
-    margin-top: 50px;
     overflow: auto;
 }
 .history::-webkit-scrollbar {
