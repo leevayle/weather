@@ -17,6 +17,12 @@
   }
 
   @font-face {
+    font-family: 'poppinsmedium';
+    src: url('../fonts/Poppins-Medium.ttf') format('opentype'),
+
+  }
+
+  @font-face {
     font-family: 'maiandraleenx';
     src: url('../fonts/MAIAN.TTF') format('opentype'),
 
@@ -27,3 +33,4 @@
     src: url('../fonts/JosefinSlab-VariableFont_wght.ttf') format('opentype'),
 
   }
+

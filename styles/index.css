@@ -188,12 +188,13 @@ html::-webkit-scrollbar {
     display: flex;
 }
 .more-values-inner{
-    width: 80%;
+    width: 95%;
     margin: auto;
     height: 80px;
     border-radius: 30px;
     display: flex;
     background: #1F2227;
+
 }
 .more-values-1,.more-values-2,.more-values-3{
     width: 30%;
@@ -204,6 +205,34 @@ html::-webkit-scrollbar {
     border-left: 1px solid rgb(78, 78, 78);
     margin: auto;
 }
+.more-values-limiter{
+    width: 75%;
+    margin: auto;
+    height: 50px;
+    margin-top: -5px;
+}
+.more-values-icon{
+    height: 25px;
+    width: 25px;
+    display: flex;
+    margin: auto;
+    margin-top: -10px;
+}
+.more-values-bold{
+    width: 100%;
+    text-align: center;
+    height: auto;
+    font-family: 'poppinsbold',sans-serif;
+    color: #cccccc;
+    margin-top: -4px;
+}
+.more-values-faint{
+    text-align: center;
+    font-family: 'poppinsmedium',sans-serif;
+    font-size: small;
+    color: #838383;
+    margin-top: -3px;
+}
 .bottom-tiles{
     height: 300px;
     padding-top: 10px;
@@ -212,6 +241,36 @@ html::-webkit-scrollbar {
     height: 20%;
     max-height: 40px;
     display: flex;
+}
+.tiles{
+    width: 20%;
+    height: 100px;
+    border-radius: 20px;
+    margin: auto;
+    background-color: #1B1D23;
+    border:  1px solid rgb(49, 49, 49);
+    background: linear-gradient(to bottom,#1F2227,#1F2227,#272a30,#1F2227,#1F2227);
+}
+.tiles-top{
+    height: 25%;
+    text-align: center;
+    font-family: 'poppinsbold',sans-serif;
+    color: #cccccc;
+    font-size: 20px;
+    padding-top: 10px;
+}
+.tiles-mid{
+    height: 40px;
+    width: 40px;
+    margin: auto;
+}
+.tiles-bottom{
+    height: 20%;
+    text-align: center;
+    font-family: 'poppinsmedium',sans-serif;
+    color: #6d6d6d;
+    font-size: small;
+    font-weight: bold;
 }
 .bottom-tiles-cont{
     height: 80%;
@@ -235,14 +294,7 @@ html::-webkit-scrollbar {
     font-weight: lighter;
     cursor: pointer;
 }
-.tiles{
-    width: 20%;
-    height: 100px;
-    border-radius: 20px;
-    margin: auto;
-    background-color: #1B1D23;
-    border:  1px solid rgb(49, 49, 49);
-}
+
 .history{
     height: auto;
     min-height: 250px;
@@ -336,7 +388,7 @@ html::-webkit-scrollbar {
 
 
 
-/* Media querries */
+/* Mobile devices - general */
 
 @media screen and (max-width:950px){
     .head{
@@ -379,6 +431,35 @@ html::-webkit-scrollbar {
 
 
     .footer{
-        width: 90%;
+        display: none;
+    }
+}
+
+/* Long phones like latest iphones and pixels */
+
+@media screen and (max-width:500px) and (max-height:940px){
+
+    .homebody{
+        margin-top: 80px;
+    }
+    .more-values{
+        margin-top: 40px;
+    }
+    .bottom-tiles{
+        margin-top: 30px;
+    }
+}
+
+/* Older phones */
+@media screen and (max-width:500px) and (max-height:850px){
+
+    .homebody{
+        margin-top: 30px;
+    }
+    .more-values{
+        margin-top: 0px;
+    }
+    .bottom-tiles{
+        margin-top: 0px;
     }
 }
