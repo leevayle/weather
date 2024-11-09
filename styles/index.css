@@ -4,21 +4,14 @@
 /* Leenx solutions 2024 */
 body, html {
     height: 100%;
-    margin: 0;
+    margin: 0;    
     max-width: 99%;
     margin-left: auto;
     margin-right: auto;
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #1f1f25, #17191C, #121416);
 }
-html::-webkit-scrollbar {
-    width: 2px; 
-  }
-  
-  html::-webkit-scrollbar-thumb {
-    background-color: #a7a7a7; 
-    border-radius: 5px; 
-  }
+
   
 .head{
     height: 75px;
@@ -38,14 +31,13 @@ html::-webkit-scrollbar {
 .logo{
     height: 40px;
     width: 48px;
-    margin-top: auto;
+    margin-top: 15px;
     margin-bottom: auto;
     margin-right: 20px;
     margin-left: 50px;
 }
 .title{
     width: 75%;
-    color: rgb(201, 12, 12);
 }
 .title-top{
     padding-top: 15px;
@@ -63,7 +55,7 @@ html::-webkit-scrollbar {
     text-align: center;
 }
 #settings{
-    margin-top: 7px;
+    margin-top: 9px;
 }
 .cont{
     min-height: 85%;
@@ -251,6 +243,11 @@ html::-webkit-scrollbar {
     border:  1px solid rgb(49, 49, 49);
     background: linear-gradient(to bottom,#1F2227,#1F2227,#272a30,#1F2227,#1F2227);
 }
+#now{
+    background: linear-gradient(to bottom, #4EBFFE,#3A98FB,#3583F1, #1a5cc7);
+    
+}
+
 .tiles-top{
     height: 25%;
     text-align: center;
@@ -277,6 +274,9 @@ html::-webkit-scrollbar {
     max-height: 150px;
     display: flex;
 }
+.now{
+    color: rgb(240, 240, 240);
+}
 .today{
     width: auto;
     padding-left: 10px;
@@ -293,27 +293,16 @@ html::-webkit-scrollbar {
     font-family: 'poppinsbold',sans-serif;
     font-weight: lighter;
     cursor: pointer;
+    display: none;
 }
 
 .history{
     height: auto;
     min-height: 250px;
     max-height: 500px;
-    overflow: auto;
     padding-top: 20px;
 }
-.history::-webkit-scrollbar {
-    width: 1px; 
-  }
-  
-  .history::-webkit-scrollbar-thumb {
-    background-color: #00000000; 
-    border-radius: 5px; 
-  }
-  
-  .history::-webkit-scrollbar-track {
-    background-color: #f0f0f000; 
-  }
+
   .history-cont{
     width: 95%;
     height: 35px;    
@@ -377,7 +366,9 @@ html::-webkit-scrollbar {
 }
 
 
-
+#back{
+    margin-top: 5px;
+}
 
 
 
@@ -408,8 +399,8 @@ html::-webkit-scrollbar {
         display: block;
         max-width:350px;
     }
-    .body{
-        height: 350px;
+    .week{
+        display: flex;
     }
     .homebody{
         margin-top: 30px;
@@ -426,6 +417,10 @@ html::-webkit-scrollbar {
     }
     .history{
         display: none;
+    }
+    .history-cont{
+        width: 100%;
+        margin-left: 7%;
     }
 
 
@@ -458,6 +453,10 @@ html::-webkit-scrollbar {
     }
     .more-values{
         margin-top: 0px;
+    }
+    .history-cont{
+        width: 85%;
+        margin-left: 13%;
     }
     .bottom-tiles{
         margin-top: 0px;
