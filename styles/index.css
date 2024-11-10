@@ -8,8 +8,17 @@ body, html {
     max-width: 99%;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #1f1f25, #17191C, #121416);
+}
+.full-body{
+    width: 100%;
+    height: 100%;
+    min-height: 99%;
+    min-width: 99%;
+    margin: auto;
+    overflow-y: auto;
 }
 
   
@@ -19,7 +28,7 @@ body, html {
     padding-top: 10px;
     display: flex;
     margin: auto;
-    max-width: 1000px;
+    max-width: 1200px;
     border-bottom: 1px solid rgb(65, 65, 65);
 }
 .head1,.head2,.head3{
@@ -68,6 +77,12 @@ body, html {
 .first,.second,.third{
     display: block;
     width: 100%;
+}
+.third{
+    overflow-x: hidden;
+}
+.third::-webkit-scrollbar{
+    display: none;
 }
 
 .header{
@@ -447,9 +462,11 @@ body, html {
 
 /* Older phones */
 @media screen and (max-width:500px) and (max-height:850px){
-
+    .header{
+        margin-top: 5px;
+    }
     .homebody{
-        margin-top: 30px;
+        margin-top: 20px;
     }
     .more-values{
         margin-top: 0px;
