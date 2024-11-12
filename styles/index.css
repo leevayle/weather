@@ -329,7 +329,7 @@ body, html {
     display: flex;
     margin: auto;
     margin-left: 70px;
-    margin-top: 15px;
+    margin-top: 25px;
     
   }
   .history-in{
@@ -348,9 +348,9 @@ body, html {
   }
   .history-in:last-child{
     width: 95px;
-    font-family: 'josefinleenx',sans-serif;
-    font-weight: bold;
-    padding-top: 15px;
+    font-family: 'poppinsbold',sans-serif;
+    font-weight: bolder;
+    padding-top: 10px;
     height: 25px;
   }
   .remainder{
@@ -358,15 +358,18 @@ body, html {
     min-width: 120px;
     height: 30px;
     padding-left: 15px;
+    margin-top: 5px;
+    font-family: 'poppinsleenx',sans-serif;
     
   }
   .week-subreading{
     margin-left: 5px;
   }
   .week-logo{
-    min-height: 25px;
-    min-width: 25px;
+    min-height: 20px;
+    min-width: 20px;
     margin-right: auto;
+    margin-top: -10px;
   }
 .days{
     margin-right: auto;
