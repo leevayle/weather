@@ -1,5 +1,5 @@
 // Assuming the JSON data is fetched from an API endpoint
-fetch('https://api.open-meteo.com/v1/forecast?latitude=-0.6817&longitude=34.7667&current=temperature_2m,relative_humidity_2m,rain,weather_code,wind_speed_10m&hourly=weather_code&timezone=Africa%2FNairobi&forecast_days=1')
+fetch('https://api.open-meteo.com/v1/forecast?latitude=-0.6817&longitude=34.7667&current=temperature_2m,relative_humidity_2m,rain,weather_code,wind_speed_10m&timezone=Africa%2FNairobi')
   .then(response => response.json())
   .then(data => {
     // Extract and round relevant data from the JSON response
@@ -7,13 +7,39 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=-0.6817&longitude=34.7667
     const humidity = Math.round(data.current.relative_humidity_2m);
     const windSpeed = Math.round(data.current.wind_speed_10m);
     const rain = Math.round(data.current.rain);
+    const weatherCode = data.current.weather_code; // Extract weather code
 
-    // Update the UI elements with rounded values
+    // Determine weather description based on the weather code
+    let weatherDescription;
+    if (weatherCode >= 0 && weatherCode <= 19) {
+      weatherDescription = "Clear skies";
+    } else if (weatherCode >= 20 && weatherCode <= 29) {
+      weatherDescription = "Thunderstorm";
+    } else if (weatherCode >= 30 && weatherCode <= 39) {
+      weatherDescription = "Drizzle";
+    } else if (weatherCode >= 40 && weatherCode <= 49) {
+      weatherDescription = "Rain";
+    } else if (weatherCode >= 50 && weatherCode <= 59) {
+      weatherDescription = "Snow";
+    } else if (weatherCode >= 60 && weatherCode <= 69) {
+      weatherDescription = "Freezing rain";
+    } else if (weatherCode >= 70 && weatherCode <= 79) {
+      weatherDescription = "Ice pellets";
+    } else if (weatherCode >= 80 && weatherCode <= 89) {
+      weatherDescription = "Rain showers";
+    } else if (weatherCode >= 90 && weatherCode <= 99) {
+      weatherDescription = "Snow showers";
+    } else {
+      weatherDescription = "Unknown";
+    }
+
+    // Update the UI elements with rounded values and weather description
     document.getElementById('temp').textContent = `${currentTemp}`;
     document.getElementById('temp-now').textContent = `${currentTemp}˚`;
     document.getElementById('humidity').textContent = `${humidity}%`;
     document.getElementById('wind-speed').textContent = `${windSpeed} km/h`;
     document.getElementById('rain').textContent = `${rain}%`;
+    document.getElementById('subreading').textContent = weatherDescription;
 
     // ... similar logic for other UI elements
 
@@ -21,6 +47,7 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=-0.6817&longitude=34.7667
   .catch(error => {
     console.error('Error fetching data:', error);
   });
+
 
 
   function getCurrentTime() {
