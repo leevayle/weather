@@ -20,6 +20,9 @@ body, html {
     margin: auto;
     overflow-y: auto;
 }
+.full-body::-webkit-scrollbar{
+    display: none;
+}
 
   
 .head{
@@ -145,12 +148,12 @@ body, html {
     margin-left: 20px;
 }
 .icon-glow{
-    width: 30px;
-    height: 30px;
+    width: 1px;
+    height: 1px;
     border-radius: 50%;
-    top:30%;
-    left: 40%;
-    box-shadow: 0 0 80px 30px rgba(255, 253, 137, 0.863);
+    top:35%;
+    left: 45%;
+    box-shadow: 0 0 80px 30px rgba(137, 255, 190, 0.863);
 }
 
 .home-reading{
@@ -272,12 +275,14 @@ body, html {
     padding-top: 10px;
 }
 .tiles-mid{
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     margin: auto;
+    margin-top: 3px;
 }
 .tiles-bottom{
     height: 20%;
+    margin-top: 5px;
     text-align: center;
     font-family: 'poppinsmedium',sans-serif;
     color: #6d6d6d;
