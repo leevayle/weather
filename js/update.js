@@ -9,29 +9,52 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=-0.6817&longitude=34.7667
     const rain = Math.round(data.current.rain);
     const weatherCode = data.current.weather_code; // Extract weather code
 
-    // Determine weather description based on the weather code
+    // Determine weather description and icon based on the weather code
     let weatherDescription;
-    if (weatherCode >= 0 && weatherCode <= 19) {
+    let icon;
+
+    if (weatherCode >= 0 && weatherCode <= 1) {
       weatherDescription = "Clear skies";
+      icon = "01.png";
+    } else if (weatherCode === 2) {
+      weatherDescription = "Partly cloudy";
+      icon = "02.png";
     } else if (weatherCode >= 20 && weatherCode <= 29) {
       weatherDescription = "Thunderstorm";
+      icon = "04.png";
     } else if (weatherCode >= 30 && weatherCode <= 39) {
       weatherDescription = "Drizzle";
+      icon = "03b.png";
     } else if (weatherCode >= 40 && weatherCode <= 49) {
       weatherDescription = "Rain";
+      icon = "03.png";
     } else if (weatherCode >= 50 && weatherCode <= 59) {
-      weatherDescription = "Snow";
+      weatherDescription = "Snow showers";
+      icon = "07.png";
     } else if (weatherCode >= 60 && weatherCode <= 69) {
       weatherDescription = "Freezing rain";
+      icon = "03c.png"; // Reuse icon for moderate rain showers if no freezing rain icon exists
     } else if (weatherCode >= 70 && weatherCode <= 79) {
       weatherDescription = "Ice pellets";
+      icon = "03a.png"; // Reuse light rain showers icon if no ice pellets icon exists
     } else if (weatherCode >= 80 && weatherCode <= 89) {
       weatherDescription = "Rain showers";
+      icon = "03.png"; // Use the main rain icon for general rain showers
     } else if (weatherCode >= 90 && weatherCode <= 99) {
       weatherDescription = "Snow showers";
+      icon = "07.png";
     } else {
       weatherDescription = "Unknown";
+      icon = "default.png"; 
     }
+
+    // Determine if it's day or night
+    const currentHour = new Date().getHours(); // Get current hour (0-23)
+    const isNight = currentHour >= 18 || currentHour < 6;
+    const folder = isNight ? "night" : "day";
+
+    // Update the icon based on the time of day
+    document.getElementById('icon').src = `images/${folder}/${icon}`;
 
     // Update the UI elements with rounded values and weather description
     document.getElementById('temp').textContent = `${currentTemp}`;
@@ -42,7 +65,6 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=-0.6817&longitude=34.7667
     document.getElementById('subreading').textContent = weatherDescription;
 
     // ... similar logic for other UI elements
-
   })
   .catch(error => {
     console.error('Error fetching data:', error);
