@@ -19,7 +19,7 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=-0.6817&longitude=34.7667
     } else if (weatherCode === 2) {
       weatherDescription = "Partly cloudy";
       icon = "02.png";
-    } else if (weatherCode >= 20 && weatherCode <= 29) {
+    } else if (weatherCode >= 3 && weatherCode <= 29) {
       weatherDescription = "Thunderstorm";
       icon = "04.png";
     } else if (weatherCode >= 30 && weatherCode <= 39) {
